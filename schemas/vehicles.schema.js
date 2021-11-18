@@ -7,6 +7,7 @@ let vehicleSchema = new Schema({
     placa : { type: String, required: [true, 'Este campo es obligatorio'] },
     ingreso: { type: Date, required: [true, 'Este campo es obligatorio'] },
     salida: { type: String, required: false },
+    isActive: {type: Boolean, required: false},
     createdAt: { type: Date, immutable: true }
 })
 

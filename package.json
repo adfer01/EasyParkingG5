@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
-  "author": "Adrián Fernando Moreno Cano",
+  "author": "GEEK 5",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
