@@ -2,12 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const moment = require('moment')
 
-let vehicleSchema = new Schema({
+let rateSchema = new Schema({
     tipo : { type: String, required: [true, 'Este campo es obligatorio'] },
-    placa : { type: String, required: [true, 'Este campo es obligatorio'] },
-    ingreso: { type: Date, required: [true, 'Este campo es obligatorio'] },
-    salida: { type: String, required: false },
-    isActive: {type: Boolean, required: false},
+    tarifaHora : { type: Number, required: [true, 'Este campo es obligatorio'] },
+    tarifaMinuto: { type: Number, required: [true, 'Este campo es obligatorio'] },
     createdAt: { type: Date, immutable: true }
 })
 
@@ -17,4 +15,4 @@ vehicleSchema.pre('save', function (next) {
     next()
 })
 
-module.exports = mongoose.model('Vehicle', vehicleSchema)
+module.exports = mongoose.model('Rate', rateSchema)

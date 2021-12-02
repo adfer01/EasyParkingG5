@@ -1,5 +1,3 @@
 {
-	"database": "Easyparking",
-	"password": "adminG5",
 	"URI": "mongodb+srv://admin:adminG5@cluster0.mjl6c.mongodb.net/Easyparking?retryWrites=true&w=majority"
 }
