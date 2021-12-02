@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const connection = require('./connection.json');
 const app = require('./app');
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4002;
 
 //app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'))

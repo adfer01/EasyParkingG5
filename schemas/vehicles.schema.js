@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const moment = require('moment')
+const moment = require('moment-timezone')
+
+moment.tz('America/Bogota')
 
 let vehicleSchema = new Schema({
     tipo : { type: String, required: [true, 'Este campo es obligatorio'] },
     placa : { type: String, required: [true, 'Este campo es obligatorio'] },
-    ingreso: { type: Date, required: [true, 'Este campo es obligatorio'] },
+    ingreso: { type: Date, default: Date.now(), required: [true, 'Este campo es obligatorio'] },
     salida: { type: String, required: false },
     isActive: {type: Boolean, required: false},
     createdAt: { type: Date, immutable: true }
