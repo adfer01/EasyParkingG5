@@ -26,6 +26,7 @@ exports.vehicle = async function (req) {
 exports.create = async function (req) {
     try{
         const vehicle = new vehicleSchema(req.body)
+        console.log(req.body)
         await vehicle.save();
         return { code: 201, message: 'Vehículo almacenado correctamente' };
     }catch(err) {
